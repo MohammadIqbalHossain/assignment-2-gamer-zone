@@ -156,11 +156,156 @@ nav ul li a {
 .game-card {
     margin: 2rem;
     text-align: left;
+    cursor: pointer;
 }
 
 .game-card img {
     width: 15rem;
+    position: relative;
 }
+
+.overlay {
+    visibility: hidden;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #0B0223;
+}
+
+.game-card img:hover {
+    opacity: 0.1;
+}
+
+.game-card img:hover .overlay {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Play instantly section */
+
+.instant-play-container {
+    margin-top: 5rem;
+    display: flex;
+    padding: 0 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-content {
+    max-width: 22rem;
+    text-align: right;
+    margin-right: 100px;
+}
+
+.play-img {
+    position: relative;
+}
+
+.play-img img {
+    width: 80%;
+    margin-left: 2rem;
+}
+
+.play-img .play-img-02 {
+    width: 40%;
+    position: absolute;
+    top: 250px;
+    right: 380px;
+}
+
+/* Play online banner section */
+
+/* ------------------ */
+
+/* Career section */
+
+/* ------------- */
+
+
+/* Gamers section */
+
+.gamers-container {
+    padding: 0 10rem;
+    margin-top: 9rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gamers {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--white-01);
+    border-radius: 3rem;
+    border: 0;
+    padding: 0.5rem;
+}
+
+.gamers:hover {
+    border: 1px solid var(--primary-shade-01);
+}
+
+.gamers img {
+    width: 3rem;
+}
+
+.gamers-name {
+    margin-left: 1rem;
+    color: var(--dark-01);
+    font-weight: 600;
+}
+
+
+/* Footer styles */
+
+.footer-container {
+    padding: 7rem 10rem;
+    background-color: var(--dark-01);
+    color: var(--white-01);
+    text-align: center;
+}
+
+.footer-container ul li {
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.footer-links li a {
+    text-decoration: none;
+    margin-right: 3rem;
+    color: var(--white-01);
+    font-weight: 600;
+}
+
+.icon i {
+    margin-right: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.privacy-link,
+.copyright-text {
+    margin-right: 2rem;
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+}
+
+
+
+
 
 /* Responsiveness for mobile */
 
@@ -170,6 +315,7 @@ nav ul li a {
     .nav-container,
     .banner-container,
     .cards-container,
+    .instant-play-container,
     nav ul {
         flex-direction: column;
         padding: 0 1rem;
@@ -208,11 +354,46 @@ nav ul li a {
         padding: 1.5rem;
     }
 
-    .cards-container{
+    .cards-container {
         justify-content: center;
         padding: 0;
     }
 
+    /* Instant play section styles */
+
+    .instant-play-container {
+        justify-content: center;
+    }
+
+    .play-content {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .play-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .play-img img {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .play-img-02 {
+        display: none;
+    }
+
+    /* Gamers sections styles */
+
+    .gamers-container {
+        padding: 1rem;
+    }
+
+    .footer-container {
+        padding: 0 2rem;
+    }
 
 }
 
@@ -222,6 +403,7 @@ nav ul li a {
 
     .nav-container,
     .cards-container,
+    .instant-play-container,
     nav ul {
         flex-direction: column;
         padding: 0 1rem;
@@ -264,16 +446,44 @@ nav ul li a {
         padding: 1.5rem;
     }
 
-    .cards-container{
+    .cards-container {
         justify-content: center;
         padding: 0;
     }
 
     .game-card {
-       margin: 0 auto;
-       text-align: center;
+        margin: 0 auto;
+        text-align: center;
     }
 
+    /* Instant play sections styles */
 
+    .instant-play-container {
+        justify-content: center;
+    }
 
+    .play-content {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .play-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .play-img img {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .play-img-02 {
+        display: none;
+    }
+
+    /* Gamers sections style */
+    .gamers-container {
+        padding: 1rem;
+    }
 }
