@@ -9,6 +9,7 @@ body {
     --dark-01: #0B0223;
     --dark-02: #534C64;
     --white-01: #FFFFFF;
+    --banner-bg: #FBF7FD;
 
     /* Define font size and font family variables separately */
     --font-size-01: 1.25rem;
@@ -111,6 +112,7 @@ nav ul li a {
 /* Banner section */
 
 .banner-container {
+    background-color: var(--banner-bg);
     padding: 0 10rem;
     display: flex;
     justify-content: space-between;
@@ -155,34 +157,46 @@ nav ul li a {
 
 .game-card {
     margin: 2rem;
-    text-align: left;
     cursor: pointer;
+    position: relative; 
 }
 
 .game-card img {
     width: 15rem;
-    position: relative;
-}
-
-.overlay {
-    visibility: hidden;
 }
 
 .overlay {
     position: absolute;
-    background-color: #0B0223;
-}
-
-.game-card img:hover {
-    opacity: 0.1;
-}
-
-.game-card img:hover .overlay {
-    visibility: visible;
+    background-color: rgba(11, 2, 35, 0.7); 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+    border-radius: 14px;
 }
+
+.game-card:hover .overlay {
+    opacity: 1; 
+}
+
+
+.overlay i {
+    color: white;
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.tooltip {
+    color: white;
+    font-size: 1rem;
+}
+
+
 
 
 /* Play instantly section */
@@ -265,6 +279,7 @@ nav ul li a {
 /* Footer styles */
 
 .footer-container {
+    margin-top: 5rem;
     padding: 7rem 10rem;
     background-color: var(--dark-01);
     color: var(--white-01);
