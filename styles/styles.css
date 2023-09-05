@@ -11,9 +11,11 @@ body {
     --white-01: #FFFFFF;
     --banner-bg: #FBF7FD;
 
-    /* Define font size and font family variables separately */
+    /* Defined font size and font family variables separately */
     --font-size-01: 1.25rem;
     --font-size-02: 3rem;
+
+    /* Font family */
     --font-family-01: 'Work Sans', sans-serif;
 }
 
@@ -40,7 +42,6 @@ body {
     color: #534C64;
     font-size: 1.125rem;
     line-height: 1.875rem;
-    /* 166.667% */
 }
 
 .btn-primary {
@@ -158,7 +159,7 @@ nav ul li a {
 .game-card {
     margin: 2rem;
     cursor: pointer;
-    position: relative; 
+    position: relative;
 }
 
 .game-card img {
@@ -167,7 +168,7 @@ nav ul li a {
 
 .overlay {
     position: absolute;
-    background-color: rgba(11, 2, 35, 0.7); 
+    background-color: rgba(11, 2, 35, 0.7);
     top: 0;
     left: 0;
     width: 100%;
@@ -176,12 +177,12 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
     border-radius: 14px;
 }
 
 .game-card:hover .overlay {
-    opacity: 1; 
+    opacity: 1;
 }
 
 
@@ -254,7 +255,7 @@ nav ul li a {
 .gamers {
     display: flex;
     align-items: center;
-
+    cursor: pointer;
     background-color: var(--white-01);
     border-radius: 3rem;
     border: 0;
@@ -262,8 +263,15 @@ nav ul li a {
 }
 
 .gamers:hover {
+    color: var(--primary-shade-01);
     border: 1px solid var(--primary-shade-01);
+   
 }
+
+.gamers-name:hover {
+    color: #FF42A5;
+}
+
 
 .gamers img {
     width: 3rem;
