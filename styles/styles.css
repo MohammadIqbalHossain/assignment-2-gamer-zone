@@ -31,6 +31,10 @@ body {
     line-height: 3.75rem;
 }
 
+.section-title {
+    font-size: 3rem;
+}
+
 .text-light-primary {
     color: #534C64;
     font-size: 1.125rem;
@@ -39,7 +43,9 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-color: var(--primary-shade-01);
+    border-radius: 3rem;
+    border: 0;
     color: var(--white-01);
     font-family: var(--font-size-01);
     text-transform: uppercase;
@@ -102,18 +108,75 @@ nav ul li a {
 }
 
 
+/* Banner section */
+
+.banner-container {
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-title {
+    color: var(--dark-01);
+    font-size: var(--font-size-02);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.styled-title {
+    font-size: 5.9375rem;
+    font-weight: 800;
+
+}
+
+.banner-img {
+    width: 50%;
+}
+
+.go-btn {
+    background-color: #4EC5F7;
+}
+
+
+/* Online gammer container styles */
+
+.online-gamer-container {
+    padding: 0rem 10rem;
+    text-align: center;
+    margin-top: 7.5rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.game-card {
+    margin: 2rem;
+    text-align: left;
+}
+
+.game-card img {
+    width: 15rem;
+}
+
 /* Responsiveness for mobile */
 
 @media screen and (max-width: 576px) {
 
-    /* Navigation responsive */
+    /* Global responsive style */
     .nav-container,
+    .banner-container,
+    .cards-container,
     nav ul {
         flex-direction: column;
         padding: 0 1rem;
 
     }
 
+    /* Navigation responsive */
     .logo {
         margin-top: 0;
     }
@@ -127,11 +190,38 @@ nav ul li a {
         margin-top: 1rem;
     }
 
+    /* Banner responsive */
+
+    .banner-content {
+        text-align: center;
+        order: 2;
+        background-color: linear(#8C57EE0D, #F144AE0D);
+    }
+
+    .banner-img {
+        width: 100%;
+        order: 1;
+    }
+
+    /* Cards responsiveness style */
+    .online-gamer-container {
+        padding: 1.5rem;
+    }
+
+    .cards-container{
+        justify-content: center;
+        padding: 0;
+    }
+
+
 }
+
+/* Tablet View */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
 
     .nav-container,
+    .cards-container,
     nav ul {
         flex-direction: column;
         padding: 0 1rem;
@@ -150,5 +240,40 @@ nav ul li a {
     .btn-nav {
         margin-top: 1rem;
     }
+
+
+    /* Banner tablet responsiveness */
+    .banner-container {
+        padding: 2rem;
+    }
+
+    .banner-content {
+        text-align: left;
+    }
+
+    .banner-title,
+    .styled-title {
+        font-size: 3rem;
+        text-align: left;
+        font-weight: 700;
+    }
+
+    /* Online game section tablet view */
+    /* Cards responsiveness style */
+    .online-gamer-container {
+        padding: 1.5rem;
+    }
+
+    .cards-container{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .game-card {
+       margin: 0 auto;
+       text-align: center;
+    }
+
+
 
 }
